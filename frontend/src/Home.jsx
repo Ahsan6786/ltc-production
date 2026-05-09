@@ -90,7 +90,7 @@ export default function Home() {
 
       {/* RESTORED: Original Video Hero Section */}
       <div className="hero-section" style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
-        <video autoPlay loop muted playsInline className="hero-video" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+        <video autoPlay loop muted playsInline poster="/newimages/banner-slide1.jpeg" className="hero-video" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
           <source src="/hero.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
@@ -262,6 +262,7 @@ export default function Home() {
               position: 'relative'
             }}>
               <img 
+                loading="lazy"
                 src="/vishwanathsir.png" 
                 alt="Prof. Dr. Vishwanath D. Karad" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} 
@@ -362,6 +363,7 @@ export default function Home() {
               position: 'relative'
             }}>
               <img 
+                loading="lazy"
                 src="/rahulsir.png" 
                 alt="Dr. Rahul V. Karad" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }} 

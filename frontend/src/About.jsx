@@ -143,7 +143,7 @@ export default function About() {
               </div>
               <div style={{ position: 'relative' }}>
                 <div style={{ width: '100%' }}>
-                  <img src="/newimages/campus-about-new.jpg" alt="What is LTC" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=What+is+LTC'; }} />
+                  <img loading="lazy" src="/newimages/campus-about-new.jpg" alt="What is LTC" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=What+is+LTC'; }} />
                 </div>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function About() {
             <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
               <div className="reverse-mobile" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ width: '100%' }}>
-                  <img src="/newimages/Root-At-MIT-WPU.png" alt="Root at MIT-WPU" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=MIT-WPU'; }} />
+                  <img loading="lazy" src="/newimages/Root-At-MIT-WPU.png" alt="Root at MIT-WPU" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=MIT-WPU'; }} />
                 </div>
               </div>
               <div>
@@ -226,7 +226,7 @@ export default function About() {
               </div>
               <div>
                 <div style={{ width: '100%' }}>
-                  <img src="/newimages/Our-Guiding-Philosophy.png" alt="Philosophy" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Philosophy'; }} />
+                  <img loading="lazy" src="/newimages/Our-Guiding-Philosophy.png" alt="Philosophy" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Philosophy'; }} />
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function About() {
             <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
               <div className="reverse-mobile" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ width: '100%' }}>
-                  <img src="/newimages/Sacred-Yajna.png" alt="Sacred Yajna" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Sacred+Yajna'; }} />
+                  <img loading="lazy" src="/newimages/Sacred-Yajna.png" alt="Sacred Yajna" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Sacred+Yajna'; }} />
                 </div>
               </div>
               <div>
@@ -284,7 +284,7 @@ export default function About() {
               </div>
               <div>
                 <div style={{ width: '100%' }}>
-                  <img src="/newimages/Anubhavamrta-Sevita.png" alt="Anubhavamrta Sevita" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Anubhavamrta+Sevita'; }} />
+                  <img loading="lazy" src="/newimages/Anubhavamrta-Sevita.png" alt="Anubhavamrta Sevita" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Anubhavamrta+Sevita'; }} />
                 </div>
               </div>
             </div>
