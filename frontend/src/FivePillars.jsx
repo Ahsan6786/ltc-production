@@ -274,7 +274,7 @@ export default function FivePillars() {
 
         {/* Hero Section */}
         <section className="white-banner five-piller-banner position-relative adj-vh" style={{ background: 'transparent' }}>
-          <img src="/newimages/Pillar-Flag-new-1.jpg" alt="Hero Background" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1920x1080?text=Pillars+Hero'; }} />
+          <img src="/newimages/Pillar-Flag-new-1.webp" alt="Hero Background" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1920x1080?text=Pillars+Hero'; }} />
           
           {/* Reduced text at the bottom left */}
           <div style={{ position: 'absolute', bottom: '60px', left: '60px', textAlign: 'left', color: 'white', maxWidth: '600px', zIndex: 2 }}>
@@ -294,9 +294,9 @@ export default function FivePillars() {
                 {/* Pillar 1 */}
                 <div id="Agriculture-Nature" className="pillar-single position-relative">
                   <Link to="/five-pillars">
-                    <img src="/newimages/Agriculture.jpeg" alt="Agriculture" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Agriculture'; }} />
+                    <img src="/newimages/Agriculture.webp" alt="Agriculture" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Agriculture'; }} />
                     <div className="pillar-content">
-                      <img src="/newimages/plant.png" alt="Agriculture Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
+                      <img src="/newimages/plant.webp" alt="Agriculture Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
                       <h3 className="pillar-title">Agriculture & Nature</h3>
                       <p>Experience the sacred bond between soil, food, and self, cultivating gratitude, ecological awareness, and the joy of mindful living.</p>
                     </div>
@@ -306,9 +306,9 @@ export default function FivePillars() {
                 {/* Pillar 2 */}
                 <div id="Physical-Fitness-Sports" className="pillar-single position-relative">
                   <Link to="/five-pillars">
-                    <img src="/newimages/physical-fitness-sports.jpeg" alt="Physical Fitness & Sports" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Fitness'; }} />
+                    <img src="/newimages/physical-fitness-sports.webp" alt="Physical Fitness & Sports" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Fitness'; }} />
                     <div className="pillar-content">
-                      <img src="/newimages/Fitness.png" alt="Fitness Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
+                      <img src="/newimages/Fitness.webp" alt="Fitness Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
                       <h3 className="pillar-title">Physical Fitness & Sports</h3>
                       <p>Rediscover your body through indigenous games, yoga, and mindful movement building strength, stamina, and resilience to awaken presence and purpose.</p>
                     </div>
@@ -318,9 +318,9 @@ export default function FivePillars() {
                 {/* Pillar 3 */}
                 <div id="Team-Building-Leadership" className="pillar-single position-relative">
                   <Link to="/five-pillars">
-                    <img src="/newimages/Leadership-Team-Building.jpeg" alt="Team Building & Leadership" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Leadership'; }} />
+                    <img src="/newimages/Leadership-Team-Building.webp" alt="Team Building & Leadership" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Leadership'; }} />
                     <div className="pillar-content">
-                      <img src="/newimages/Leadership.png" alt="Leadership Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
+                      <img src="/newimages/Leadership.webp" alt="Leadership Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
                       <h3 className="pillar-title">Team Building & Leadership</h3>
                       <p>Step beyond personal ambition into collective growth lead with empathy, serve with purpose, and draw strength from shared responsibility and unity.</p>
                     </div>
@@ -330,9 +330,9 @@ export default function FivePillars() {
                 {/* Pillar 4 */}
                 <div id="Patriotism-Nation-Building" className="pillar-single position-relative p-hover">
                   <Link to="/five-pillars">
-                    <img src="/newimages/Patriotism-Nation-Building.jpeg" alt="Patriotism & Nation Building" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Patriotism'; }} />
+                    <img src="/newimages/Patriotism-Nation-Building.webp" alt="Patriotism & Nation Building" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Patriotism'; }} />
                     <div className="pillar-content">
-                      <img src="/newimages/Patriotism.png" alt="Patriotism Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
+                      <img src="/newimages/Patriotism.webp" alt="Patriotism Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
                       <h3 className="pillar-title">Patriotism & Nation Building</h3>
                       <p>Deepen your love for the nation through seva, culture, & purposeful action reigniting pride in your identity & showing that true nation-building begins within.</p>
                     </div>
@@ -342,9 +342,9 @@ export default function FivePillars() {
                 {/* Pillar 5 */}
                 <div id="Spirituality-Peace" className="pillar-single position-relative">
                   <Link to="/five-pillars">
-                    <img src="/newimages/spirituality_pillar.jpeg" alt="Spirituality & Peace" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Spirituality'; }} />
+                    <img src="/newimages/spirituality_pillar.webp" alt="Spirituality & Peace" className="img-fluid" onError={(e) => { e.target.src = 'https://via.placeholder.com/240x350?text=Spirituality'; }} />
                     <div className="pillar-content">
-                      <img src="/newimages/Peace.png" alt="Spirituality Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
+                      <img src="/newimages/Peace.webp" alt="Spirituality Icon" className="pillar-icon" onError={(e) => { e.target.src = 'https://via.placeholder.com/50?text=Icon'; }} />
                       <h3 className="pillar-title">Spirituality & Peace</h3>
                       <p>Find strength in stillness through yoga, reflection, and sacred silence, discover clarity, inner calm, and the joy of simply being.</p>
                     </div>
@@ -372,7 +372,7 @@ export default function FivePillars() {
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '20px' }}>
               <div>
-                <img src="/ltc.png" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
+                <img src="/ltc.webp" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
               </div>
               <div style={{ display: 'flex', gap: '20px', color: '#94a3b8' }}>
                 <Globe size={20} style={{ cursor: 'pointer' }} />

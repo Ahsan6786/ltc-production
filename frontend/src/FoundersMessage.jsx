@@ -9,8 +9,8 @@ export default function FoundersMessage() {
       {/* New Hero Section (Full Width) */}
       <div style={{ position: 'relative', width: '100%', height: '100vh', overflow: 'hidden', marginBottom: '40px' }}>
         <picture style={{ width: '100%', height: '100%', display: 'block' }}>
-          <source media="(max-width: 768px)" srcSet="/Rahul-karad.png" />
-          <img src="/Dr-Rahul-Karad.png" alt="Dr. Rahul V. Karad" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} onError={(e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; }} />
+          <source media="(max-width: 768px)" srcSet="/Rahul-karad.webp" />
+          <img src="/Dr-Rahul-Karad.webp" alt="Dr. Rahul V. Karad" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} onError={(e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; }} />
         </picture>
         
         {/* Dark Overlay */}
@@ -28,7 +28,7 @@ export default function FoundersMessage() {
 
         {/* Message Card */}
         <div style={{ background: 'white', padding: '40px', borderRadius: '24px', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', marginBottom: '40px', position: 'relative', border: '1px solid #e2e8f0', borderTop: '5px solid #2563eb', overflow: 'hidden' }}>
-          <img src="/pattern2.png" alt="" style={{ position: 'absolute', top: '-20px', right: '-20px', width: '150px', opacity: 0.05, pointerEvents: 'none' }} />
+          <img src="/pattern2.webp" alt="" style={{ position: 'absolute', top: '-20px', right: '-20px', width: '150px', opacity: 0.05, pointerEvents: 'none' }} />
           <div style={{ position: 'absolute', top: '20px', right: '20px', opacity: 0.1 }}>
             <Quote size={80} color="#2563eb" />
           </div>
@@ -57,9 +57,9 @@ export default function FoundersMessage() {
 
         {/* Vice Chancellor's Message Card */}
         <div style={{ background: 'white', padding: '40px', borderRadius: '24px', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', marginBottom: '40px', position: 'relative', overflow: 'hidden' }}>
-          <img src="/pattern2.png" alt="" style={{ position: 'absolute', top: '-20px', right: '-20px', width: '150px', opacity: 0.05, pointerEvents: 'none' }} />
+          <img src="/pattern2.webp" alt="" style={{ position: 'absolute', top: '-20px', right: '-20px', width: '150px', opacity: 0.05, pointerEvents: 'none' }} />
           <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '20px' }}>
-            <img src="/Dr-R-M-Chitnis.png" alt="Dr. R. M. Chitnis" style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover' }} onError={(e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; }} />
+            <img src="/Dr-R-M-Chitnis.webp" alt="Dr. R. M. Chitnis" style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover' }} onError={(e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; }} />
             <div>
               <h2 style={{ fontSize: '22px', fontWeight: '800', color: '#0f172a', margin: 0 }}>Vice Chancellor's Message</h2>
               <p style={{ fontSize: '14px', color: '#64748b', margin: 0 }}>MIT World Peace University, Pune</p>
@@ -83,9 +83,9 @@ export default function FoundersMessage() {
 
         {/* Chief Academic Officer's Message Card */}
         <div style={{ background: 'white', padding: '40px', borderRadius: '24px', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', marginBottom: '40px', position: 'relative', overflow: 'hidden' }}>
-          <img src="/pattern2.png" alt="" style={{ position: 'absolute', top: '-20px', right: '-20px', width: '150px', opacity: 0.05, pointerEvents: 'none' }} />
+          <img src="/pattern2.webp" alt="" style={{ position: 'absolute', top: '-20px', right: '-20px', width: '150px', opacity: 0.05, pointerEvents: 'none' }} />
           <div style={{ display: 'flex', gap: '20px', alignItems: 'center', marginBottom: '20px' }}>
-            <img src="/Dr-Prasad-Khandekar.png" alt="Dr. Prasad Khandekar" style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover' }} onError={(e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; }} />
+            <img src="/Dr-Prasad-Khandekar.webp" alt="Dr. Prasad Khandekar" style={{ width: '80px', height: '80px', borderRadius: '50%', objectFit: 'cover' }} onError={(e) => { e.target.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'; }} />
             <div>
               <h2 style={{ fontSize: '22px', fontWeight: '800', color: '#0f172a', margin: 0 }}>Chief Academic Officer’s Message</h2>
               <p style={{ fontSize: '14px', color: '#64748b', margin: 0 }}>MIT World Peace University, Pune</p>
@@ -125,7 +125,7 @@ export default function FoundersMessage() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '20px' }}>
             {/* Logo area */}
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <img src="/ltc.png" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
+              <img src="/ltc.webp" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
             </div>
 
             {/* Social Icons */}

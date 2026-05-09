@@ -48,14 +48,14 @@ export default function Programs() {
   ];
 
   const masonryImages = [
-    "/newimages/Agriculture.jpeg",
-    "/newimages/Leadership-Team-Building.jpeg",
-    "/newimages/Patriotism-Nation-Building.jpeg",
-    "/newimages/physical-fitness.png",
-    "/newimages/campus-about-new.jpg",
-    "/newimages/nature.jpeg",
+    "/newimages/Agriculture.webp",
+    "/newimages/Leadership-Team-Building.webp",
+    "/newimages/Patriotism-Nation-Building.webp",
+    "/newimages/physical-fitness.webp",
+    "/newimages/campus-about-new.webp",
+    "/newimages/nature.webp",
     "/newimages/sports_banner_2.JPG",
-    "/newimages/Our-Guiding-Philosophy.png"
+    "/newimages/Our-Guiding-Philosophy.webp"
   ];
 
   return (
@@ -125,7 +125,7 @@ export default function Programs() {
 
         {/* Hero Section */}
         <div style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
-          <video autoPlay muted loop playsInline poster="/newimages/banner-slide1.jpeg" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+          <video autoPlay muted loop playsInline poster="/newimages/banner-slide1.webp" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
             <source src="/flag-video-ltc.mp4" type="video/mp4" />
           </video>
           <div style={{ position: 'absolute', bottom: '50px', left: '50px', color: 'white', textAlign: 'left' }}>
@@ -162,7 +162,7 @@ export default function Programs() {
               </div>
               <div>
                 <div style={{ width: '100%', borderRadius: '24px', overflow: 'hidden' }}>
-                  <img src="/newimages/programe/slide1.png" alt="What is LRP" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=LRP+Concept'; }} />
+                  <img src="/newimages/programe/slide1.webp" alt="What is LRP" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=LRP+Concept'; }} />
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function Programs() {
             <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
               <div className="reverse-mobile" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ width: '100%' }}>
-                  <img src="/newimages/LTC-Residential-Program.png" alt="Why Choose LRP" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Why+Choose+LRP'; }} />
+                  <img src="/newimages/LTC-Residential-Program.webp" alt="Why Choose LRP" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Why+Choose+LRP'; }} />
                 </div>
               </div>
               <div>
@@ -210,7 +210,7 @@ export default function Programs() {
               </div>
               <div>
                 <div style={{ width: '100%' }}>
-                  <img src="/newimages/programe/Asset-programe-page.png" alt="Pedagogy" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500?text=Pedagogy'; }} />
+                  <img src="/newimages/programe/Asset-programe-page.webp" alt="Pedagogy" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500?text=Pedagogy'; }} />
                 </div>
               </div>
             </div>
@@ -278,7 +278,7 @@ export default function Programs() {
 
         {/* Footer Top Image */}
         <div style={{ width: '100%', height: 'auto', overflow: 'hidden' }}>
-          <img src="/newimages/programe/programe-page-footer-top.png" alt="LTC Program Footer" style={{ width: '100%', height: 'auto' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1920x300?text=Footer+Top'; }} />
+          <img src="/newimages/programe/programe-page-footer-top.webp" alt="LTC Program Footer" style={{ width: '100%', height: 'auto' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1920x300?text=Footer+Top'; }} />
         </div>
 
         {/* Footer */}
@@ -288,7 +288,7 @@ export default function Programs() {
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '20px' }}>
               <div>
-                <img src="/ltc.png" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
+                <img src="/ltc.webp" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
               </div>
               <div style={{ display: 'flex', gap: '20px', color: '#94a3b8' }}>
                 <Globe size={20} style={{ cursor: 'pointer' }} />

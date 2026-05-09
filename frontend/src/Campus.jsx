@@ -163,7 +163,7 @@ export default function Campus() {
               Inspired by Vision. Rooted in compassion. At LTC, every space is built with purpose to inspire, engage, and transform. Spread across 150 acres of nature and learning zones, the campus blends tradition with experience, offering an environment where growth feels natural and meaningful.
             </p>
             <div style={{ maxWidth: '1200px', margin: '40px auto 0 auto' }}>
-              <img src="/newimages/campus/campus-tree.png" alt="Campus Sketch" style={{ width: '100%', height: 'auto', display: 'block', mixBlendMode: 'multiply' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1200x600?text=Campus+Sketch'; }} />
+              <img src="/newimages/campus/campus-tree.webp" alt="Campus Sketch" style={{ width: '100%', height: 'auto', display: 'block', mixBlendMode: 'multiply' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1200x600?text=Campus+Sketch'; }} />
             </div>
           </div>
         </section>
@@ -191,7 +191,7 @@ export default function Campus() {
 
                 {/* Card 2 */}
                 <div className="premium-card">
-                  <img src="/newimages/campus/Open-Air-Theater.jpeg" alt="Open-Air Theatre" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Theatre'; }} />
+                  <img src="/newimages/campus/Open-Air-Theater.webp" alt="Open-Air Theatre" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Theatre'; }} />
                   <div className="card-overlay">
                     <h3 className="card-title">Open-Air Theatre</h3>
                     <div className="arrow-btn">↗</div>
@@ -209,7 +209,7 @@ export default function Campus() {
 
                 {/* Card 4 */}
                 <div className="premium-card">
-                  <img src="/newimages/campus/Observation-Point.png" alt="Observation Point" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Observation'; }} />
+                  <img src="/newimages/campus/Observation-Point.webp" alt="Observation Point" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Observation'; }} />
                   <div className="card-overlay">
                     <h3 className="card-title">Observation Point</h3>
                     <div className="arrow-btn">↗</div>
@@ -235,7 +235,7 @@ export default function Campus() {
                 
                 {/* Card 1 */}
                 <div className="premium-card">
-                  <img src="/newimages/campus/farm-pond-new.jpeg" alt="Farm Pond" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Farm+Pond'; }} />
+                  <img src="/newimages/campus/farm-pond-new.webp" alt="Farm Pond" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Farm+Pond'; }} />
                   <div className="card-overlay">
                     <h3 className="card-title">Farm Pond</h3>
                     <div className="arrow-btn">↗</div>
@@ -244,7 +244,7 @@ export default function Campus() {
 
                 {/* Card 2 */}
                 <div className="premium-card">
-                  <img src="/newimages/campus/krishi-vanam-new.jpeg" alt="Krishi Vanam" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Farm'; }} />
+                  <img src="/newimages/campus/krishi-vanam-new.webp" alt="Krishi Vanam" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Farm'; }} />
                   <div className="card-overlay">
                     <h3 className="card-title">Krishi Vanam</h3>
                     <div className="arrow-btn">↗</div>
@@ -253,7 +253,7 @@ export default function Campus() {
 
                 {/* Card 3 */}
                 <div className="premium-card">
-                  <img src="/newimages/campus/flora-new.jpeg" alt="Flora" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Flora'; }} />
+                  <img src="/newimages/campus/flora-new.webp" alt="Flora" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Flora'; }} />
                   <div className="card-overlay">
                     <h3 className="card-title">Flora</h3>
                     <div className="arrow-btn">↗</div>
@@ -278,7 +278,7 @@ export default function Campus() {
         <section style={{ padding: '40px 20px' }}>
           <div className="container">
             <div style={{ maxWidth: '1000px', margin: '0 auto', borderRadius: '24px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.05)' }}>
-              <img src="/newimages/campus/ltc-campus.jpeg" alt="LTC Campus Aerial View" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1200x600?text=LTC+Campus+Aerial+View'; }} />
+              <img src="/newimages/campus/ltc-campus.webp" alt="LTC Campus Aerial View" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1200x600?text=LTC+Campus+Aerial+View'; }} />
             </div>
           </div>
         </section>
@@ -297,7 +297,7 @@ export default function Campus() {
                 
                 {/* Card 1 */}
                 <div className="premium-card">
-                  <img src="/newimages/campus/Community-Kitchen-new.jpeg" alt="Community Kitchen" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Kitchen'; }} />
+                  <img src="/newimages/campus/Community-Kitchen-new.webp" alt="Community Kitchen" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Kitchen'; }} />
                   <div className="card-overlay">
                     <h3 className="card-title">Community Kitchen</h3>
                     <div className="arrow-btn">↗</div>
@@ -315,7 +315,7 @@ export default function Campus() {
 
                 {/* Card 3 */}
                 <div className="premium-card">
-                  <img src="/newimages/campus/Faculty-Housing.png" alt="Faculty Housing" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Faculty+Housing'; }} />
+                  <img src="/newimages/campus/Faculty-Housing.webp" alt="Faculty Housing" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Faculty+Housing'; }} />
                   <div className="card-overlay">
                     <h3 className="card-title">Faculty Housing</h3>
                     <div className="arrow-btn">↗</div>
@@ -324,7 +324,7 @@ export default function Campus() {
 
                 {/* Card 4 */}
                 <div className="premium-card">
-                  <img src="/newimages/LTC-Medical-Centre-new.png" alt="Medical Facilities" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Medical'; }} />
+                  <img src="/newimages/LTC-Medical-Centre-new.webp" alt="Medical Facilities" className="card-img" onError={(e) => { e.target.src = 'https://via.placeholder.com/400x300?text=Medical'; }} />
                   <div className="card-overlay">
                     <h3 className="card-title">Medical Facilities</h3>
                     <div className="arrow-btn">↗</div>
@@ -386,7 +386,7 @@ export default function Campus() {
                 {/* Right Side: Map Image */}
                 <div className="col-12 col-md-6">
                   <div style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', border: '1px solid #e2e8f0' }}>
-                    <img src="/newimages/campus/map.png" alt="Campus Map" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x500?text=Campus+Map'; }} />
+                    <img src="/newimages/campus/map.webp" alt="Campus Map" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x500?text=Campus+Map'; }} />
                   </div>
                 </div>
 
@@ -402,7 +402,7 @@ export default function Campus() {
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '20px' }}>
               <div>
-                <img src="/ltc.png" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
+                <img src="/ltc.webp" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
               </div>
               <div style={{ display: 'flex', gap: '20px', color: '#94a3b8' }}>
                 <Globe size={20} style={{ cursor: 'pointer' }} />

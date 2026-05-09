@@ -90,8 +90,8 @@ export default function Home() {
 
       {/* RESTORED: Original Video Hero Section */}
       <div className="hero-section" style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
-        <video autoPlay loop muted playsInline poster="/newimages/banner-slide1.jpeg" className="hero-video" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
-          <source src="/hero.mp4" type="video/mp4" />
+        <video autoPlay loop muted playsInline poster="/newimages/banner-slide1.webp" className="hero-video" style={{ width: '100%', height: '100%', objectFit: 'cover' }}>
+          <source src="/hero-optimized.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         
@@ -178,7 +178,7 @@ export default function Home() {
             overflow: 'hidden'
           }}>
             {/* Pattern Accent */}
-            <img src="/pattern2.png" alt="" style={{ position: 'absolute', top: '20px', left: '20px', height: '60px', opacity: 0.8 }} />
+            <img src="/pattern2.webp" alt="" loading="lazy" style={{ position: 'absolute', top: '20px', left: '20px', height: '60px', opacity: 0.8 }} />
             
             <span style={{ fontSize: '12px', fontWeight: '800', color: '#f59e0b', textTransform: 'uppercase', letterSpacing: '3px' }}>Our Direction</span>
             <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#0f172a', margin: '10px 0 20px' }}>Vision</h2>
@@ -204,7 +204,7 @@ export default function Home() {
             overflow: 'hidden'
           }}>
             {/* Pattern Accent */}
-            <img src="/pattern2.png" alt="" style={{ position: 'absolute', top: '20px', left: '20px', height: '60px', opacity: 0.8 }} />
+            <img src="/pattern2.webp" alt="" loading="lazy" style={{ position: 'absolute', top: '20px', left: '20px', height: '60px', opacity: 0.8 }} />
             
             <span style={{ fontSize: '12px', fontWeight: '800', color: '#f59e0b', textTransform: 'uppercase', letterSpacing: '3px' }}>Our Purpose</span>
             <h2 style={{ fontSize: '36px', fontWeight: '800', color: '#0f172a', margin: '10px 0 20px' }}>Mission</h2>
@@ -263,7 +263,7 @@ export default function Home() {
             }}>
               <img 
                 loading="lazy"
-                src="/vishwanathsir.png" 
+                src="/vishwanathsir.webp" 
                 alt="Prof. Dr. Vishwanath D. Karad" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }} 
                 onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500?text=Inspiration'; }} 
@@ -364,7 +364,7 @@ export default function Home() {
             }}>
               <img 
                 loading="lazy"
-                src="/rahulsir.png" 
+                src="/rahulsir.webp" 
                 alt="Dr. Rahul V. Karad" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
                 onError={(e) => { e.target.src = 'https://via.placeholder.com/400x500?text=Visionary'; }} 
@@ -520,7 +520,7 @@ export default function Home() {
       <div style={{ background: 'white', padding: '140px 20px', textAlign: 'center' }}>
         <div style={{ maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
           {/* Pattern Accent */}
-          <img src="/pattern2.png" alt="" style={{ position: 'absolute', top: '-40px', left: '0', height: '60px', opacity: 0.8 }} />
+          <img src="/pattern2.webp" alt="" style={{ position: 'absolute', top: '-40px', left: '0', height: '60px', opacity: 0.8 }} />
           
           <p style={{ 
             color: '#1d4ed8', /* Vibrant Blue */
@@ -661,7 +661,8 @@ export default function Home() {
                 width: isMobile ? '100%' : 'auto'
               }}>
                 <img className="popout-image"
-                  src="/Prof-Dr-Vishwanath-Karad.png" 
+                  src="/Prof-Dr-Vishwanath-Karad.webp" 
+                  loading="lazy" 
                   alt="Prof. Dr. Vishwanath D. Karad" 
                   style={{ height: '100%', objectFit: 'contain' }}
                 />
@@ -695,7 +696,7 @@ export default function Home() {
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '20px' }}>
             {/* Logo area */}
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <img src="/ltc.png" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
+              <img src="/ltc.webp" alt="LTC Logo" loading="lazy" style={{ height: '50px', objectFit: 'contain' }} />
             </div>
 
             {/* Social Icons */}

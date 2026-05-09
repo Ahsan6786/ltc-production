@@ -110,7 +110,7 @@ export default function About() {
 
         {/* Hero Section (Carousel or Banner) */}
         <div style={{ position: 'relative', height: '100vh', overflow: 'hidden' }}>
-          <img src="/newimages/banner-slide1.jpeg" alt="Hero Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1920x800?text=About+Us'; }} />
+          <img src="/newimages/banner-slide1.webp" alt="Hero Background" style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1920x800?text=About+Us'; }} />
         </div>
 
         {/* Quote Section */}
@@ -143,7 +143,7 @@ export default function About() {
               </div>
               <div style={{ position: 'relative' }}>
                 <div style={{ width: '100%' }}>
-                  <img loading="lazy" src="/newimages/campus-about-new.jpg" alt="What is LTC" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=What+is+LTC'; }} />
+                  <img loading="lazy" src="/newimages/campus-about-new.webp" alt="What is LTC" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=What+is+LTC'; }} />
                 </div>
               </div>
             </div>
@@ -190,7 +190,7 @@ export default function About() {
             <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
               <div className="reverse-mobile" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ width: '100%' }}>
-                  <img loading="lazy" src="/newimages/Root-At-MIT-WPU.png" alt="Root at MIT-WPU" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=MIT-WPU'; }} />
+                  <img loading="lazy" src="/newimages/Root-At-MIT-WPU.webp" alt="Root at MIT-WPU" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=MIT-WPU'; }} />
                 </div>
               </div>
               <div>
@@ -226,7 +226,7 @@ export default function About() {
               </div>
               <div>
                 <div style={{ width: '100%' }}>
-                  <img loading="lazy" src="/newimages/Our-Guiding-Philosophy.png" alt="Philosophy" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Philosophy'; }} />
+                  <img loading="lazy" src="/newimages/Our-Guiding-Philosophy.webp" alt="Philosophy" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Philosophy'; }} />
                 </div>
               </div>
             </div>
@@ -239,7 +239,7 @@ export default function About() {
             <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
               <div className="reverse-mobile" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ width: '100%' }}>
-                  <img loading="lazy" src="/newimages/Sacred-Yajna.png" alt="Sacred Yajna" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Sacred+Yajna'; }} />
+                  <img loading="lazy" src="/newimages/Sacred-Yajna.webp" alt="Sacred Yajna" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Sacred+Yajna'; }} />
                 </div>
               </div>
               <div>
@@ -284,7 +284,7 @@ export default function About() {
               </div>
               <div>
                 <div style={{ width: '100%' }}>
-                  <img loading="lazy" src="/newimages/Anubhavamrta-Sevita.png" alt="Anubhavamrta Sevita" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Anubhavamrta+Sevita'; }} />
+                  <img loading="lazy" src="/newimages/Anubhavamrta-Sevita.webp" alt="Anubhavamrta Sevita" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Anubhavamrta+Sevita'; }} />
                 </div>
               </div>
             </div>
@@ -297,7 +297,7 @@ export default function About() {
             <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '60px', alignItems: 'center' }}>
               <div className="reverse-mobile" style={{ display: 'flex', flexDirection: 'column' }}>
                 <div style={{ width: '100%' }}>
-                  <img src="/newimages/Bharat-Timeless-Spirit.png" alt="Rooted in Bharat" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Bharat'; }} />
+                  <img src="/newimages/Bharat-Timeless-Spirit.webp" alt="Rooted in Bharat" style={{ width: '100%', height: 'auto', display: 'block' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/600x400?text=Bharat'; }} />
                 </div>
               </div>
               <div>
@@ -346,8 +346,8 @@ export default function About() {
                 </p>
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
-                <img src="/newimages/ltc-logo-big.png" alt="LTC Logo" style={{ maxWidth: '200px' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/200?text=Logo'; }} />
-                <img src="/newimages/ltc-logo-design-journey.png" alt="Logo Journey" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 10px 20px rgba(0,0,0,0.05)' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/400x200?text=Journey'; }} />
+                <img src="/newimages/ltc-logo-big.webp" alt="LTC Logo" style={{ maxWidth: '200px' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/200?text=Logo'; }} />
+                <img src="/newimages/ltc-logo-design-journey.webp" alt="Logo Journey" style={{ width: '100%', borderRadius: '12px', boxShadow: '0 10px 20px rgba(0,0,0,0.05)' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/400x200?text=Journey'; }} />
               </div>
             </div>
           </div>
@@ -387,7 +387,7 @@ export default function About() {
 
         {/* Infrastructure Image */}
         <div style={{ width: '100%', height: 'auto', overflow: 'hidden' }}>
-          <img src="/newimages/life-transformation-centre.png" alt="LTC Infrastructure" style={{ width: '100%', height: 'auto' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1920x600?text=Infrastructure'; }} />
+          <img src="/newimages/life-transformation-centre.webp" alt="LTC Infrastructure" style={{ width: '100%', height: 'auto' }} onError={(e) => { e.target.src = 'https://via.placeholder.com/1920x600?text=Infrastructure'; }} />
         </div>
 
         {/* Footer */}
@@ -397,7 +397,7 @@ export default function About() {
             
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '40px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '20px' }}>
               <div>
-                <img src="/ltc.png" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
+                <img src="/ltc.webp" alt="LTC Logo" style={{ height: '50px', objectFit: 'contain' }} />
               </div>
               <div style={{ display: 'flex', gap: '20px', color: '#94a3b8' }}>
                 <Globe size={20} style={{ cursor: 'pointer' }} />

@@ -160,7 +160,7 @@ export default function Navbar() {
       <nav className="navbar">
         <Link to="/" style={{ textDecoration: 'none' }}>
           <div className="navbar-brand">
-            <img src="/ltc.png" alt="LTC Logo" style={{ height: '40px' }} />
+            <img src="/ltc.webp" alt="LTC Logo" style={{ height: '40px' }} />
           </div>
         </Link>
 

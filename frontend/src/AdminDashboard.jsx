@@ -477,7 +477,7 @@ export default function AdminDashboard() {
           {isMobile && (
             <button className="sidebar-close-btn" onClick={() => setIsSidebarOpen(false)}>×</button>
           )}
-          <img src="/ltc.png" alt="LTC Logo" className="sidebar-logo" />
+          <img src="/ltc.webp" alt="LTC Logo" className="sidebar-logo" />
           <p className="sidebar-portal-label">Admin Portal</p>
           <p className="sidebar-sub-label">{currentUser?.name || 'Administrator'}</p>
         </div>
@@ -1098,7 +1098,7 @@ export default function AdminDashboard() {
 
               <div style={{ textAlign: 'center', marginBottom: '30px', borderBottom: '2px solid #1a365d', paddingBottom: '15px' }}>
                 <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '10px' }}>
-                  <img src="/ltc.png" alt="LTC Logo" style={{ height: '60px' }} />
+                  <img src="/ltc.webp" alt="LTC Logo" style={{ height: '60px' }} />
                 </div>
                 <p style={{ color: '#d97706', fontSize: '16px', fontWeight: 'bold' }}>आत्मानं विद्धि</p>
                 <h2 style={{ fontSize: '20px', marginTop: '15px', color: '#333', textTransform: 'uppercase' }}>Official Feedback Report</h2>

@@ -41,8 +41,8 @@ export default function Login() {
   return (
     <div className="login-minimal-container" style={{ overflow: 'hidden' }}>
       {/* Background Watermarks */}
-      <img src="/pattern2.png" alt="" style={{ position: 'absolute', top: '-50px', right: '-50px', width: '250px', opacity: 0.05, pointerEvents: 'none' }} />
-      <img src="/pattern2.png" alt="" style={{ position: 'absolute', bottom: '-50px', left: '-50px', width: '250px', opacity: 0.05, pointerEvents: 'none', transform: 'rotate(180deg)' }} />
+      <img src="/pattern2.webp" alt="" style={{ position: 'absolute', top: '-50px', right: '-50px', width: '250px', opacity: 0.05, pointerEvents: 'none' }} />
+      <img src="/pattern2.webp" alt="" style={{ position: 'absolute', bottom: '-50px', left: '-50px', width: '250px', opacity: 0.05, pointerEvents: 'none', transform: 'rotate(180deg)' }} />
 
       <Link to="/" style={{ position: 'fixed', top: '40px', left: '40px', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px', color: '#0f172a', fontWeight: '700', fontSize: '14px' }}>
         <ArrowLeft size={18} /> Back to Site

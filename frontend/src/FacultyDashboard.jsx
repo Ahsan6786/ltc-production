@@ -459,7 +459,7 @@ export default function FacultyDashboard() {
           {isMobile && (
             <button className="sidebar-close-btn" style={{ alignSelf: 'flex-end', position: 'absolute', top: '10px', right: '10px' }} onClick={() => setIsSidebarOpen(false)}>×</button>
           )}
-          <img src="/ltc.png" alt="LTC Logo" style={{ width: '180px', height: '180px', objectFit: 'contain', marginBottom: '12px', marginLeft: '-5px' }} />
+          <img src="/ltc.webp" alt="LTC Logo" style={{ width: '180px', height: '180px', objectFit: 'contain', marginBottom: '12px', marginLeft: '-5px' }} />
           <p style={{ fontSize: '18px', fontWeight: '800', color: 'white', margin: 0, textTransform: 'uppercase', letterSpacing: '0.5px' }}>Faculty Portal</p>
           <p style={{ fontSize: '13px', color: '#94a3b8', margin: 0, fontWeight: '500' }}>{isPrimary ? 'Primary Faculty' : 'Secondary Faculty'}</p>
         </div>
