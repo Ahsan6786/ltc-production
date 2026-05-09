@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Plus, Users, UploadCloud, GraduationCap, BookOpen, CheckCircle, AlertCircle, LayoutDashboard, FileText, Search, LogOut, Menu } from 'lucide-react'
+import { Plus, Users, UploadCloud, GraduationCap, BookOpen, CheckCircle, AlertCircle, LayoutDashboard, FileText, Search, LogOut, Menu, MessageSquare } from 'lucide-react'
 import Papa from 'papaparse'
 import * as XLSX from 'xlsx'
 import ScrollToTop from './ScrollToTop'
@@ -9,6 +9,8 @@ export default function AdminDashboard() {
   const [users, setUsers] = useState([])
   const [documents, setDocuments] = useState([])
   const [activeTab, setActiveTab] = useState('faculty')
+  const [isGeneratingReport, setIsGeneratingReport] = useState(false)
+  const [reportData, setReportData] = useState(null)
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
 
@@ -54,16 +56,56 @@ export default function AdminDashboard() {
     setIsFeedbackModalOpen(true)
     try {
       const res = await fetch(`http://localhost:5001/api/admin/feedback?user_id=${userId}`, {
-        headers: { 'Authorization': `Bearer ${token}` }
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
       })
       const data = await res.json()
-      if (res.ok) {
-        setFeedbackList(data.feedback || [])
-      }
+      setFeedbackList(data.feedback || [])
     } catch (err) {
       alert('Failed to fetch feedback.')
     }
   }
+
+  const handleGenerateReport = async () => {
+    setIsGeneratingReport(true);
+    setReportData(null);
+    try {
+      const res = await fetch('http://localhost:5001/api/admin/feedback/report', {
+        headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+      });
+      const data = await res.json();
+      if (res.ok) {
+        const text = data.report;
+        
+        const posMatch = text.match(/POSITIVE_COUNT:\s*(\d+)/);
+        const negMatch = text.match(/NEGATIVE_COUNT:\s*(\d+)/);
+        const neuMatch = text.match(/NEUTRAL_COUNT:\s*(\d+)/);
+        const sumMatch = text.match(/SUMMARY:\s*(.+)/);
+        
+        const positive_count = posMatch ? parseInt(posMatch[1]) : 0;
+        const negative_count = negMatch ? parseInt(negMatch[1]) : 0;
+        const neutral_count = neuMatch ? parseInt(neuMatch[1]) : 0;
+        const summary = sumMatch ? sumMatch[1].trim() : '';
+        
+        const parts = text.split('---');
+        const report = parts.length > 1 ? parts.slice(1).join('---').trim() : text;
+
+        setReportData({
+          positive_count,
+          negative_count,
+          neutral_count,
+          summary,
+          report,
+          categories: [] 
+        });
+      } else {
+        alert(data.message || 'Failed to generate report.');
+      }
+    } catch (err) {
+      alert('Error generating report: ' + err.message);
+    } finally {
+      setIsGeneratingReport(false);
+    }
+  };
 
   useEffect(() => {
     if (!currentUser || currentUser.role !== 'admin') {
@@ -461,6 +503,12 @@ export default function AdminDashboard() {
           >
             <Users size={16} /> LTC Members
           </button>
+          <button
+            className={`sidebar-item ${activeTab === 'feedback' ? 'active' : ''}`}
+            onClick={() => { setActiveTab('feedback'); if (isMobile) setIsSidebarOpen(false); }}
+          >
+            <MessageSquare size={16} /> LTC Feedback
+          </button>
 
           <div className="sidebar-separator" />
           <p className="sidebar-section-label">Data</p>
@@ -847,6 +895,119 @@ export default function AdminDashboard() {
                 </tbody>
               </table>
             </div>
+          </div>
+        )}
+
+        {activeTab === 'feedback' && (
+          <div className="glass-card animate-fade-in">
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <MessageSquare className="text-primary" />
+                <h2 style={{ fontSize: '20px', fontWeight: '700' }}>LTC Feedback Analysis</h2>
+              </div>
+            </div>
+
+            <p style={{ color: '#64748b', marginBottom: '20px' }}>
+              Generate an AI-powered report summarizing all student feedback to identify common issues and trends.
+            </p>
+
+            <button 
+              className="btn" 
+              onClick={handleGenerateReport}
+              disabled={isGeneratingReport}
+              style={{ marginBottom: '20px' }}
+            >
+              {isGeneratingReport ? 'Generating Report...' : 'Generate Report by Feedback'}
+            </button>
+
+            {reportData && (
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                {/* Summary Cards */}
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
+                  <div style={{ background: '#f0fdf4', padding: '16px', borderRadius: '8px', border: '1px solid #bbf7d0' }}>
+                    <p style={{ fontSize: '12px', color: '#15803d', marginBottom: '4px' }}>Positive Feedback</p>
+                    <p style={{ fontSize: '24px', fontWeight: '800', color: '#16a34a' }}>{reportData.positive_count}</p>
+                  </div>
+                  <div style={{ background: '#fef2f2', padding: '16px', borderRadius: '8px', border: '1px solid #fecaca' }}>
+                    <p style={{ fontSize: '12px', color: '#b91c1c', marginBottom: '4px' }}>Negative/Issues</p>
+                    <p style={{ fontSize: '24px', fontWeight: '800', color: '#dc2626' }}>{reportData.negative_count}</p>
+                  </div>
+                  <div style={{ background: '#f8fafc', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                    <p style={{ fontSize: '12px', color: '#64748b', marginBottom: '4px' }}>Neutral</p>
+                    <p style={{ fontSize: '24px', fontWeight: '800', color: '#475569' }}>{reportData.neutral_count}</p>
+                  </div>
+                </div>
+
+                {/* Summary Text */}
+                <div style={{ background: '#f8fafc', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                  <p style={{ fontSize: '14px', fontWeight: '600', color: '#0f172a', marginBottom: '4px' }}>AI Summary</p>
+                  <p style={{ fontSize: '14px', color: '#475569' }}>{reportData.summary}</p>
+                </div>
+
+                {/* Custom Charts (Bar Charts) */}
+                <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: '24px' }}>
+                  {/* Sentiment Bar Chart */}
+                  <div style={{ background: 'white', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                    <p style={{ fontSize: '14px', fontWeight: '600', color: '#0f172a', marginBottom: '16px' }}>Sentiment Breakdown</p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      {['Positive', 'Negative', 'Neutral'].map(type => {
+                        const count = reportData[`${type.toLowerCase()}_count`];
+                        const total = reportData.positive_count + reportData.negative_count + reportData.neutral_count;
+                        const percentage = total > 0 ? (count / total) * 100 : 0;
+                        const color = type === 'Positive' ? '#10b981' : type === 'Negative' ? '#ef4444' : '#94a3b8';
+                        return (
+                          <div key={type}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '4px' }}>
+                              <span style={{ color: '#475569', fontWeight: '500' }}>{type}</span>
+                              <span style={{ color: '#0f172a', fontWeight: '600' }}>{count}</span>
+                            </div>
+                            <div style={{ width: '100%', height: '10px', background: '#f1f5f9', borderRadius: '5px', overflow: 'hidden' }}>
+                              <div style={{ width: `${percentage}%`, height: '100%', background: color, borderRadius: '5px', transition: 'width 0.5s ease' }}></div>
+                            </div>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+
+                  {/* Categories Bar Chart */}
+                  <div style={{ background: 'white', padding: '16px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
+                    <p style={{ fontSize: '14px', fontWeight: '600', color: '#0f172a', marginBottom: '16px' }}>Feedback by Category</p>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                      {reportData.categories && reportData.categories.map(cat => {
+                        const maxCount = Math.max(...reportData.categories.map(c => c.count), 1);
+                        const percentage = (cat.count / maxCount) * 100;
+                        return (
+                          <div key={cat.name}>
+                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '12px', marginBottom: '4px' }}>
+                              <span style={{ color: '#475569', fontWeight: '500' }}>{cat.name}</span>
+                              <span style={{ color: '#0f172a', fontWeight: '600' }}>{cat.count}</span>
+                            </div>
+                            <div style={{ width: '100%', height: '10px', background: '#f1f5f9', borderRadius: '5px', overflow: 'hidden' }}>
+                              <div style={{ width: `${percentage}%`, height: '100%', background: '#3b82f6', borderRadius: '5px', transition: 'width 0.5s ease' }}></div>
+                            </div>
+                          </div>
+                        )
+                      })}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Full Report */}
+                <div style={{ 
+                  background: '#f8fafc', 
+                  padding: '20px', 
+                  borderRadius: '8px', 
+                  border: '1px solid #e2e8f0',
+                  whiteSpace: 'pre-wrap',
+                  fontFamily: 'inherit',
+                  color: '#334155'
+                }}>
+                  <p style={{ fontSize: '14px', fontWeight: '600', color: '#0f172a', marginBottom: '12px' }}>Full Report</p>
+                  {reportData.report.replace(/#+\s/g, '').replace(/\*\*/g, '')}
+                </div>
+              </div>
+            )}
           </div>
         )}
       </div>
