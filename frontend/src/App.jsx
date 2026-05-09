@@ -7,6 +7,10 @@ import FacultyDashboard from './FacultyDashboard'
 import StudentDashboard from './StudentDashboard'
 import Navbar from './Navbar'
 import FoundersMessage from './FoundersMessage'
+import About from './About'
+import Programs from './Programs'
+import FivePillars from './FivePillars'
+import Campus from './Campus'
 
 function ScrollToTopOnRoute() {
   const { pathname } = useLocation();
@@ -64,6 +68,10 @@ export default function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/programs" element={<Programs />} />
+            <Route path="/five-pillars" element={<FivePillars />} />
+            <Route path="/campus" element={<Campus />} />
             <Route path="/founders-message" element={<FoundersMessage />} />
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={<AdminDashboard />} />

@@ -1,0 +1,542 @@
+/* shraddha-mit start */
+.credit-section {
+  padding-top: 150px;
+}
+.ls-lsize {
+  width: 170px;
+  height: auto;
+}
+.cm-Crtitle {
+  margin-bottom: 9px;
+}
+.cm-fatitle {
+  margin-bottom: 9px;
+}
+/* Align content */
+.faculty-box {
+  align-items: flex-start;
+}
+.yellow-faculty-br {
+  border-left: 4px solid #e79024;
+  display: inline-block;
+}
+.fbelow {
+  padding-top: 20px;
+}
+/* leadership section */
+.leadership {
+  margin-top: 60px;
+}
+.ply-5 {
+  padding-bottom: 3rem !important;
+}
+.fleaderbelow {
+  padding-top: 50px;
+}
+.quote-name {
+  font-size: 20px;
+  font-weight: 500;
+  color: #000000;
+  margin-bottom: 5px;
+}
+.work-team {
+  margin-bottom: 10rem;
+}
+/* shraddha-mit end */
+
+/* CSS -Gayatri*/
+.spacing-1 {
+  padding: 110px 0;
+}
+/* .mb-3{padding-bottom:50px;} */
+.sm-quote1 {
+  font-size: 22px;
+  color: #fff;
+  width: 50%;
+}
+.sm-quote2 {
+  font-size: 22px;
+  color: #fff;
+  width: 83%;
+  margin-left: 7% !important;
+}
+.sm-quote3 {
+  font-size: 22px;
+  color: #fff;
+  width: 60%;
+  margin-left: 7% !important;
+}
+.model1 {
+  right: 10%;
+  bottom: -200%;
+}
+.model2 {
+  right: -3%;
+  bottom: -140%;
+}
+.model-section1 {
+  padding: 86px 0px;
+}
+.pl-banner {
+  background: url(../images/agri_pillar.jpeg) no-repeat;
+  min-height: 94vh;
+  position: relative !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: self-end;
+  text-align: left;
+  background-position: center;
+  background-size: cover;
+}
+.agri-banner .banner-container {
+  padding-left: 10%;
+  padding-bottom: 4%;
+}
+.pillar-banner-title {
+  font-family: var(--fontAnek);
+  font-weight: 600;
+  font-size: 48px;
+  margin: 16px 0;
+}
+.bg-green {
+  background: #66b03a;
+}
+.g-pattern {
+  right: 8%;
+  bottom: -10%;
+}
+.eq-space {
+  margin-bottom: 40px;
+}
+.agri-subtitle {
+  font-family: var(--fontAnek);
+  font-weight: 600;
+  font-size: 30px;
+}
+.agri-title {
+  font-family: var(--fontAnek);
+  font-weight: 800;
+  font-size: 50px;
+  margin: 16px 713px 264px;
+}
+.agri-pg {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 32px;
+  text-align: center;
+  max-width: 80%;
+}
+.banner-container {
+  max-width: 1100px;
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 10px;
+}
+.agri-img {
+  align-items: center;
+}
+.title-label {
+  font-size: 24px;
+}
+.pl-titles {
+  color: rgba(102, 176, 58, 1);
+  font-size: 35px;
+  font-weight: 700;
+  font-family: var(--fontAnek);
+}
+.img-adj1 {
+  top: 30%;
+  left: -6%;
+}
+.fitness-bg {
+  background: url(../images/physical_fitness_banner.jpeg);
+  background-position: center;
+  background-size: cover;  
+}
+.team-bg {
+  background: url(../images/team_building_banner.jpeg);
+  background-position: center;
+  background-size: cover;  
+}
+.patriotism-bg {
+  background: url(../images/patroitism_banner.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.peace-bg {
+  background: url(../images/spirituality_banner.jpeg);
+  background-position: center;
+  background-size: cover; 
+}
+.bg-orange-red {
+  background: #d85933;
+}
+.bg-darkyellow {
+  background: #f19817;
+}
+.sm-quote-adj {
+  font-size: 22px;
+  color: #fff;
+  width: 52%;
+  margin-left: 16% !important;
+}
+.qt_img {
+  bottom: -220% !important;
+}
+.bg-skyblue {
+  background: #3cadff;
+}
+.skb-clr {
+  color: #3cadff;
+}
+.yellowog-clr {
+  color: #f19817;
+}
+.img-corner {
+  border-radius: 20px;
+}
+
+/*Gallery*/
+.green-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+.green-card {
+  background: #396a1c;
+  padding: 40px 30px;
+  border-radius: 18px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.green-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.green-card::after {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 50px;
+  height: 50px;
+  background: url("../images/agri-pattern-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+}
+/*masonry-photos*/
+.masonry {
+  column-count: 3;
+  column-gap: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.masonry img {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pl-banner {
+    min-height: 44vh;
+  }
+  .pillar-banner-title {
+    font-size: 26px;
+  }
+  .sm-quote1 {
+    width: 80%;
+    font-size: 20px;
+  }
+  .model-section1 {
+    padding: 60px 0;
+  }
+  .pl-titles {
+    font-size: 28px;
+  }
+  .d-mob-none {
+    display: none;
+  }
+  .spacing {
+    padding: 60px 0;
+  }
+  .sm-quote,
+  .sm-quote-adj {
+    width: 90%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .strip {
+    padding: 55px 0 170px 0 !important;
+  }
+  .strip .r-pattern {
+    display: none;
+  }
+  /*.model{width: 38%;bottom: -140%;translate: -50%;}*/
+  .model-section {
+    margin: 0 0 100px 0;
+  }
+  .mob-nospace {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry {
+    column-count: 1;
+  }
+}
+
+.sport1-banner {
+  background: url("../images/sport-banner.png") no-repeat;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: 100%;
+}
+.banner-container123 {
+  position: absolute;
+  left: 10px; /* distance from left */
+  bottom: 20px; /* distance from bottom */
+}
+.bg-title {
+  margin: 0;
+  font-size: 54px;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  text-align: left;
+  padding-left: 150px;
+  font-weight: 600px;
+}
+.burnt-og {
+  color: #d85933;
+}
+
+/*Gallery*/
+.orange-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.orange-card {
+  background: #b14c2e;
+  padding: 40px 30px;
+  border-radius: 18px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.orange-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.orange-card p,
+.green-card p,
+.purple-card p {
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 300;
+  font-family: var(--fontInter);
+}
+.orange-card::after {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 50px;
+  height: 50px;
+  background: url("../images/sport-pattern-2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+}
+
+/* 3rd Pillar - Team Building & Leadership*/
+.leadership-banner {
+  background: url("../images/leadership-banner-1.png") no-repeat;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: 100%;
+}
+/*Gallery*/
+.blue-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.blue-card {
+  background: #0775c5;
+  padding: 40px 30px;
+  border-radius: 18px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.blue-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.blue-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  font-family: var(--fontInter);
+}
+.blue-card::after {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 50px;
+  height: 50px;
+  background: url("../images/team-pattern-2.png");
+  background-size: contain; 
+  background-repeat: no-repeat;
+  opacity: 0.18;
+}
+/* 4th Pillar - Patriotism & Nation Building*/
+.patriotism-banner {
+  background: url("https://lifetransformation.org.in/assets/images/patriotism-banner-1.jpeg") no-repeat;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: 100%;
+}
+.team-name {
+  color: #ba7005;
+  font-size: 30px;
+  font-weight: 700;
+}
+/*Gallery*/
+.red-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+.strong-orange-card {
+  background: #ba7005;
+  padding: 40px 30px;
+  border-radius: 18px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.strong-orange-card h3 {
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.strong-orange-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: var(--fontInter);
+}
+.strong-orange-card::after {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 50px;
+  height: 50px;
+  background: url("../images/patriotism-pattern-3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+}
+/* 5th Pillar - Spirituality & Peace*/
+.peace-banner {
+  background: url("../images/spirituality-peace-banner-1.png") no-repeat;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: 100%;
+}
+.peace-name {
+  color: #744cc2;
+  font-size: 30px;
+  font-weight: 700;
+}
+/*Gallery*/
+.purple-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: auto;
+}
+.purple-card {
+  background: #744cc2;
+  padding: 40px 30px;
+  border-radius: 18px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.purple-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.purple-card::after {
+  content: "";
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 50px;
+  height: 50px;
+  background: url("../images/peace-pattern-1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.18;
+}
+/* CSS end -Gayatri */

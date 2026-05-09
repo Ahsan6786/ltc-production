@@ -198,7 +198,7 @@ select.input-field {
   max-width: 1200px;
   background: white;
   border-radius: 50px;
-  padding: 12px 30px;
+  padding: 18px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -233,18 +233,75 @@ select.input-field {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 36px;
+  flex: 1;
+  justify-content: space-between;
+  margin-left: 60px;
 }
 
 .nav-link-item {
   text-decoration: none;
   color: #0f172a;
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 500;
+  font-size: 16px;
   transition: color 0.3s;
 }
 
 .nav-link-item:hover {
+  color: #2563eb;
+}
+
+.nav-login-btn {
+  text-decoration: none;
+  color: white !important;
+  background: #0f172a;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.nav-login-btn:hover {
+  background: #1e293b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+}
+
+/* Dropdown Menu */
+.nav-item-wrapper {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 10px 0;
+  min-width: 220px;
+  display: none;
+  z-index: 1000;
+  border: 1px solid #e2e8f0;
+}
+
+.nav-item-wrapper:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  color: #0f172a;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.dropdown-item:hover {
+  background: #f1f5f9;
   color: #2563eb;
 }
 
@@ -586,6 +643,8 @@ select.input-field {
     align-items: center;
     position: fixed;
     inset: 0;
+    margin: 0;
+    flex: none;
     width: 100%;
     height: 100%;
     background: rgba(15, 23, 42, 0.98);
@@ -850,4 +909,32 @@ select.input-field {
   background: #94a3b8;
   cursor: not-allowed;
   transform: none;
+}
+
+/* Premium Footer Styles */
+.premium-footer h4 {
+  color: #94a3b8 !important;
+}
+
+.premium-footer a {
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+}
+
+.premium-footer a:hover {
+  color: #94a3b8 !important;
+  text-decoration: none !important;
+}
+
+.premium-footer span {
+  color: #94a3b8 !important;
+}
+
+.premium-footer p {
+  color: #94a3b8 !important;
+}
+
+.premium-footer img {
+  filter: grayscale(100%);
+  opacity: 0.7;
 }

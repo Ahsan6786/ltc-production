@@ -2,6 +2,38 @@ import React, { useState, useEffect } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { LogOut, Menu, Sun, X } from 'lucide-react'
 
+const navLinksData = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about', dropdown: [
+    { title: 'What is LTC', anchor: '#What-is-LTC' },
+    { title: 'Roots at MIT-WPU', anchor: '#Root-at-MIT-WPU' },
+    { title: 'Philosophy: Soil to Soul', anchor: '#Philosophy-Soil-to-Soul' },
+    { title: 'The Sacred Yajña', anchor: '#The-Sacred-Yajna' },
+    { title: 'Anubhavāmṛta Sevita', anchor: '#Anubhavamrta-Sevita' },
+    { title: 'Rooted in Bharat', anchor: '#Rooted-in-Bharat' },
+    { title: 'The Birth of a Movement', anchor: '#The-Birth-of-Movement' },
+    { title: 'NEP 2020', anchor: '#NEP-2020' }
+  ]},
+  { name: 'Program', path: '/programs', dropdown: [
+    { title: 'What is LRP', anchor: '#What-is-LRP' },
+    { title: 'Program Pedagogy', anchor: '#Program-Pedagogy' },
+    { title: 'Experiential Learning', anchor: '#Experiential-Learning' }
+  ]},
+  { name: 'Five Pillars', path: '/five-pillars', dropdown: [
+    { title: 'Agriculture & Nature', anchor: '#Agriculture-Nature' },
+    { title: 'Physical Fitness & Sports', anchor: '#Physical-Fitness-Sports' },
+    { title: 'Team Building & Leadership', anchor: '#Team-Building-Leadership' },
+    { title: 'Patriotism & Nation Building', anchor: '#Patriotism-Nation-Building' },
+    { title: 'Spirituality & Peace', anchor: '#Spirituality-Peace' }
+  ]},
+  { name: 'Campus', path: '/campus', dropdown: [
+    { title: 'Learning & Reflection Spaces', anchor: '#Learning-Reflection-Spaces' },
+    { title: 'Spaces for Inner & Outer Growth', anchor: '#Spaces-Inner-Outer-Growth' },
+    { title: 'Living & Wellness Facilities', anchor: '#Living-Wellness-Facilities' },
+    { title: 'Map Zone 2', anchor: '#Map-Zone-2' }
+  ]}
+];
+
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
@@ -13,12 +45,52 @@ export default function Navbar() {
   }, []);
   const navigate = useNavigate()
   const location = useLocation()
+  const [user, setUser] = useState(() => JSON.parse(localStorage.getItem('user') || 'null'))
   const token = localStorage.getItem('token')
-  const user = JSON.parse(localStorage.getItem('user') || 'null')
+
+  useEffect(() => {
+    if (token && user) {
+      fetch('http://localhost:5001/api/me', {
+        headers: { 'Authorization': `Bearer ${token}` }
+      })
+      .then(res => {
+        if (res.status === 401) {
+          throw new Error('Unauthorized');
+        }
+        if (!res.ok) {
+          throw new Error('API error');
+        }
+        return res.json();
+      })
+      .then(data => {
+        localStorage.setItem('user', JSON.stringify(data.user));
+        setUser(data.user);
+      })
+      .catch(err => {
+        console.error('Auth verification failed:', err.message);
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        setUser(null);
+      });
+    }
+  }, [token]);
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = decodeURIComponent(location.hash.substring(1));
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location]);
 
   const handleLogout = () => {
     localStorage.removeItem('token')
     localStorage.removeItem('user')
+    setUser(null)
     navigate('/')
   }
 
@@ -29,11 +101,27 @@ export default function Navbar() {
 
   const NavLinks = ({ mobile = false }) => (
     <div className={`nav-links ${mobile ? 'active' : ''}`}>
-      <Link to="/" className="nav-link-item" onClick={() => mobile && setIsMenuOpen(false)}>Home</Link>
-      <Link to="#" className="nav-link-item" onClick={() => mobile && setIsMenuOpen(false)}>About</Link>
-      <Link to="#" className="nav-link-item" onClick={() => mobile && setIsMenuOpen(false)}>Program</Link>
-      <Link to="#" className="nav-link-item" onClick={() => mobile && setIsMenuOpen(false)}>Five Pillars</Link>
-      <Link to="#" className="nav-link-item" onClick={() => mobile && setIsMenuOpen(false)}>Campus</Link>
+      {navLinksData.map(link => (
+        <div key={link.name} className="nav-item-wrapper" style={{ position: 'relative' }}>
+          <Link to={link.path} className="nav-link-item" onClick={() => mobile && setIsMenuOpen(false)}>
+            {link.name}
+          </Link>
+          {link.dropdown && !mobile && (
+            <div className="dropdown-menu">
+              {link.dropdown.map(item => (
+                <Link 
+                  key={item.title} 
+                  to={`${link.path}${item.anchor}`} 
+                  className="dropdown-item"
+                  onClick={() => mobile && setIsMenuOpen(false)}
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
       
       {user ? (
         <>
@@ -43,10 +131,15 @@ export default function Navbar() {
           </button>
         </>
       ) : (
-        <Link to="/login" className="nav-link-item" onClick={() => mobile && setIsMenuOpen(false)}>Login</Link>
+        <Link to="/login" className="nav-login-btn" onClick={() => mobile && setIsMenuOpen(false)}>Login</Link>
       )}
     </div>
   );
+
+  const allowedPaths = ['/', '/about', '/programs', '/five-pillars', '/campus'];
+  if (!allowedPaths.includes(location.pathname)) {
+    return null
+  }
 
   return (
     <>

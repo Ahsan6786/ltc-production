@@ -187,6 +187,12 @@ export default function StudentDashboard() {
   const fetchDashboardData = async () => {
     try {
       const res = await fetch('http://localhost:5001/api/student/dashboard', { headers: { 'Authorization': `Bearer ${token}` } })
+      if (res.status === 401) {
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
+        navigate('/login')
+        return
+      }
       const data = await res.json()
       if (res.ok) setMyData(data.data || {})
 

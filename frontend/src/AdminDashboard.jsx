@@ -79,6 +79,12 @@ export default function AdminDashboard() {
       const res = await fetch('http://localhost:5001/api/admin/users', {
         headers: { 'Authorization': `Bearer ${token}` }
       })
+      if (res.status === 401) {
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
+        navigate('/login')
+        return
+      }
       const data = await res.json()
       if (res.ok) setUsers(data.users || [])
     } catch (err) {
@@ -91,6 +97,12 @@ export default function AdminDashboard() {
       const res = await fetch('http://localhost:5001/api/documents', {
         headers: { 'Authorization': `Bearer ${token}` }
       })
+      if (res.status === 401) {
+        localStorage.removeItem('token')
+        localStorage.removeItem('user')
+        navigate('/login')
+        return
+      }
       const data = await res.json()
       if (res.ok) setDocuments(data.documents || [])
     } catch (err) {
